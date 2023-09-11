@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { startTransition, useState } from 'react';
 import randomColor from 'randomcolor';
 import { GetColorName } from 'hex-color-to-color-name';
 
@@ -32,7 +32,7 @@ export default function App() {
       >
         <p style={{ textAlign: 'center' }}>
           <div>
-            `Generated Color: {colorName} {newColor}`
+            Generated Color: {colorName} {newColor}
           </div>
         </p>
       </div>
