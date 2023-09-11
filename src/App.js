@@ -31,10 +31,9 @@ export default function App() {
         }}
       >
         <p style={{ textAlign: 'center' }}>
-          <br />
-          Generated Color: <br /> <br />
-          {colorName} <br /> <br />
-          {newColor}
+          <div>
+            `Generated Color: {colorName} {newColor}`
+          </div>
         </p>
       </div>
     </div>
