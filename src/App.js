@@ -30,9 +30,7 @@ export default function App() {
           height: '200px',
         }}
       >
-        <div>
-          Generated Color: {colorName} {newColor}
-        </div>
+        Generated Color: {colorName} {newColor}
       </div>
     </div>
   );
