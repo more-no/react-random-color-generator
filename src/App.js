@@ -1,7 +1,10 @@
+import { useState } from 'react';
 import randomColor from 'randomcolor';
 import { GetColorName } from 'hex-color-to-color-name';
 
 export default function App() {
+  const initialColor = randomColor();
+  const [bgColor, setBgColor] = useState(initialColor);
   const newColor = randomColor();
   const colorName = GetColorName(newColor);
 
@@ -9,14 +12,20 @@ export default function App() {
     <div>
       <h1> React Random Color Generator</h1>
 
-      <button onClick={newColor}>Generate</button>
+      <button
+        onClick={() => {
+          setBgColor(newColor);
+        }}
+      >
+        Generate
+      </button>
 
       <br />
       <br />
       <div
         style={{
           color: 'black',
-          backgroundColor: newColor,
+          backgroundColor: bgColor,
           width: '400px',
           height: '200px',
         }}
