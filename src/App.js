@@ -5,12 +5,10 @@ export default function App() {
   const initialColor = randomColor();
   const [bgColor, setBgColor] = useState(initialColor);
   const newColor = randomColor();
-  console.log(newColor);
 
   return (
     <div>
       <h1> React Random Color Generator</h1>
-
       <button
         onClick={() => {
           setBgColor(newColor);
@@ -24,12 +22,12 @@ export default function App() {
       <div
         style={{
           color: 'black',
-          backgroundColor: newColor,
+          backgroundColor: bgColor,
           width: '400px',
           height: '200px',
         }}
       >
-        Generated Color: {newColor}
+        Generated Color: {bgColor}
       </div>
     </div>
   );
