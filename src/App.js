@@ -5,6 +5,7 @@ export default function App() {
   const initialColor = randomColor();
   const [bgColor, setBgColor] = useState(initialColor);
   const newColor = randomColor();
+  console.log(newColor);
 
   return (
     <div>
@@ -23,7 +24,7 @@ export default function App() {
       <div
         style={{
           color: 'black',
-          backgroundColor: bgColor,
+          backgroundColor: newColor,
           width: '400px',
           height: '200px',
         }}
