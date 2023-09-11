@@ -30,11 +30,9 @@ export default function App() {
           height: '200px',
         }}
       >
-        <p style={{ textAlign: 'center' }}>
-          <div>
-            Generated Color: {colorName} {newColor}
-          </div>
-        </p>
+        <div>
+          Generated Color: {colorName} {newColor}
+        </div>
       </div>
     </div>
   );
