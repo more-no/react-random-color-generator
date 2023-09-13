@@ -1,13 +1,14 @@
 import { useState } from 'react';
 import randomColor from 'randomcolor';
+import { Div, Div1 } from './components';
 
 export default function App() {
   const initialColor = randomColor();
   const [bgColor, setBgColor] = useState(initialColor);
   const [hexColor, setHexColor] = useState('red');
+  const [userWidth, setUserWidth] = useState('400');
+  const [userHeight, setUserHeight] = useState('200');
   const newColor = randomColor();
-  let userWidth = '400';
-  let userHeight = '200';
 
   const handlePrompt = () => {
     const userHue = window.prompt('Hue:');
@@ -23,8 +24,8 @@ export default function App() {
   };
 
   const handleSizePrompt = () => {
-    userWidth = window.prompt('Width: ');
-    userHeight = window.prompt('Height: ');
+    setUserWidth(window.prompt('Width: '));
+    setUserHeight(window.prompt('Height: '));
   };
 
   return (
@@ -39,16 +40,7 @@ export default function App() {
       </button>
       <br />
       <br />
-      <div
-        style={{
-          color: 'black',
-          backgroundColor: bgColor,
-          width: '400px',
-          height: '200px',
-        }}
-      >
-        Generated Color: {bgColor}
-      </div>
+      <Div backgroundColor={bgColor}>Generated Color: {bgColor}</Div>
       <br />
 
       <button
@@ -61,16 +53,13 @@ export default function App() {
       </button>
       <br />
       <br />
-      <div
-        style={{
-          color: 'black',
-          backgroundColor: hexColor,
-          width: `${userWidth}px`,
-          height: `${userHeight}px`,
-        }}
+      <Div1
+        backgroundColor={hexColor}
+        width={`${userWidth}px`}
+        height={`${userHeight}px`}
       >
         User Color: {hexColor}
-      </div>
+      </Div1>
     </div>
   );
 }

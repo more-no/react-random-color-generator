@@ -17,11 +17,11 @@ Our suggestions for breaking down the task into TODOs:
 
 ## Stretch Goals
 
-- [ ] Ask for a hue
-- [ ] Ask for a lightness
+- [x] Ask for a hue
+- [x] Ask for a lightness
 - [ ] Transition smoothly between the colors as they change
-- [ ] Use a CSS-in-JS library for all styling (eg. Emotion or Styled Components)
-- [ ] Ask for a size for the color box and generate a box of that size
+- [x] Use a CSS-in-JS library for all styling (eg. Emotion or Styled Components)
+- [x] Ask for a size for the color box and generate a box of that size
 - [ ] Make a "screensaver mode" where the color box moves around in a diagonal pattern, bouncing off the screen edges and changing color (eg. like [this](https://user-images.githubusercontent.com/1935696/93082456-42d27100-f691-11ea-872a-7cb7c0df6b9a.gif))
 
 ## Acceptance Criteria
