@@ -5,7 +5,7 @@ import { Div, Div1 } from './components';
 export default function App() {
   const initialColor = randomColor();
   const [bgColor, setBgColor] = useState(initialColor);
-  const [hexColor, setHexColor] = useState('red');
+  const [hexColor, setHexColor] = useState('#b2120c');
   const [userWidth, setUserWidth] = useState('400');
   const [userHeight, setUserHeight] = useState('200');
   const newColor = randomColor();
