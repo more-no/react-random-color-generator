@@ -6,22 +6,25 @@ export default function App() {
   const [bgColor, setBgColor] = useState(initialColor);
   const [hexColor, setHexColor] = useState('red');
   const newColor = randomColor();
-
-  let userHue = null;
-  let userLuminosity = null;
-  let userColor = null;
+  let userWidth = '400';
+  let userHeight = '200';
 
   const handlePrompt = () => {
-    userHue = window.prompt('Hue:');
-    userLuminosity = window.prompt('Luminosity:');
+    const userHue = window.prompt('Hue:');
+    const userLuminosity = window.prompt('Luminosity:');
 
     if (userLuminosity != null && userHue != null) {
-      userColor = randomColor({
+      const userColor = randomColor({
         luminosity: userLuminosity,
         hue: userHue,
       });
       setHexColor(userColor);
     }
+  };
+
+  const handleSizePrompt = () => {
+    userWidth = window.prompt('Width: ');
+    userHeight = window.prompt('Height: ');
   };
 
   return (
@@ -51,6 +54,7 @@ export default function App() {
       <button
         onClick={() => {
           handlePrompt();
+          handleSizePrompt();
         }}
       >
         Choose color and size
@@ -61,8 +65,8 @@ export default function App() {
         style={{
           color: 'black',
           backgroundColor: hexColor,
-          width: '400px',
-          height: '200px',
+          width: `${userWidth}px`,
+          height: `${userHeight}px`,
         }}
       >
         User Color: {hexColor}
